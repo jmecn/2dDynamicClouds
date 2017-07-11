@@ -1,4 +1,4 @@
-MaterialDef 2D Volume Clouds {
+MaterialDef 2D Dynamic Clouds {
     MaterialParameters {
         Texture2D Octave0 : Repeat Textures/noise_128.png
         Texture2D Octave1 : Repeat Textures/noise_64.png
@@ -25,8 +25,6 @@ MaterialDef 2D Volume Clouds {
         
         WorldParameters {
             WorldViewProjectionMatrix
-            WorldViewMatrix
-            NormalMatrix
             Time
         }
     }

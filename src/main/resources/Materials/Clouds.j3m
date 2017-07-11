@@ -13,7 +13,7 @@ Material Clouds : MatDefs/Clouds.j3md {
         
         CloudColor : 1.0 1.0 1.0 1.0
         
-        Sharpness : 0.6
+        Sharpness : 0.65
         Emptiness : 0.3
         
         Speed : 0.01
@@ -21,6 +21,5 @@ Material Clouds : MatDefs/Clouds.j3md {
     
     AdditionalRenderState {
         Blend Alpha
-        FaceCull Off
     }
 }

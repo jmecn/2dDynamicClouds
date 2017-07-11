@@ -1,7 +1,3 @@
-//#version 430 compatibility
-
-uniform mat4 g_WorldViewMatrix;
-
 uniform sampler2D m_Octave0;
 uniform sampler2D m_Octave1;
 uniform sampler2D m_Octave2;

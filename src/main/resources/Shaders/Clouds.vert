@@ -1,8 +1,4 @@
-//#version 430 compatibility
-
-uniform mat4 g_WorldViewMatrix;
 uniform mat4 g_WorldViewProjectionMatrix;
-uniform mat3 g_NormalMatrix;
 uniform float g_Time;
 
 uniform vec4 m_Octave0_ST;
@@ -25,11 +21,11 @@ vec2 transform_tex(in vec2 coord, in vec4 st)
 
 void main()
 {
-	vec4 vVertex = vec4(inPosition, 1.0);
-    
-	gl_Position = g_WorldViewProjectionMatrix * vVertex;
+
     uv0.xy = transform_tex(inTexCoord, m_Octave0_ST) + g_Time * 1.0 * m_Speed * vec2(1.0, 0.0);
     uv0.zw = transform_tex(inTexCoord, m_Octave1_ST) + g_Time * 1.5 * m_Speed * vec2(0.0, 1.0);
     uv1.xy = transform_tex(inTexCoord, m_Octave2_ST) + g_Time * 2.0 * m_Speed * vec2(0.0, -1.0);
     uv1.zw = transform_tex(inTexCoord, m_Octave3_ST) + g_Time * 2.5 * m_Speed * vec2(-1.0, 0.0);
+        
+	gl_Position = g_WorldViewProjectionMatrix * vec4(inPosition, 1.0);
 }
