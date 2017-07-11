@@ -13,13 +13,7 @@ uniform vec4 m_Octave3_ST;
 uniform float m_Speed;
 
 in vec3 inPosition;
-in vec3 inNormal;
-in vec4 inColor;
 in vec2 inTexCoord;
-
-out vec4 vColor;
-out float vLightIntensity;
-out vec3 vECposition;
 
 out vec4 uv0;
 out vec4 uv1;
@@ -31,10 +25,7 @@ vec2 transform_tex(in vec2 coord, in vec4 st)
 
 void main()
 {
-    vColor = inColor;
 	vec4 vVertex = vec4(inPosition, 1.0);
-	vECposition = vec3(g_WorldViewMatrix * vVertex);
-	vec3 vNormal = normalize( g_NormalMatrix * inNormal );
     
 	gl_Position = g_WorldViewProjectionMatrix * vVertex;
     uv0.xy = transform_tex(inTexCoord, m_Octave0_ST) + g_Time * 1.0 * m_Speed * vec2(1.0, 0.0);
