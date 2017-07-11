@@ -1,0 +1,33 @@
+MaterialDef 2D Volume Clouds {
+    MaterialParameters {
+        Texture2D Octave0 : Repeat Textures/noise_128.png
+        Texture2D Octave1 : Repeat Textures/noise_64.png
+        Texture2D Octave2 : Repeat Textures/noise_32.png
+        Texture2D Octave3 : Repeat Textures/noise_16.png
+        
+        // Tiling && Offset
+        Vector4 Octave0_ST : 1.0 1.0 0.0 0.0
+        Vector4 Octave1_ST : 1.0 1.0 0.0 0.0
+        Vector4 Octave2_ST : 1.0 1.0 0.0 0.0
+        Vector4 Octave3_ST : 1.0 1.0 0.0 0.0
+        
+        Vector4 CloudColor : 1.0 1.0 1.0 1.0
+        
+        Float Sharpness : 1.0
+        Float Emptiness : 0.0
+        
+        Float Speed : 1.0
+    }
+    
+    Technique Default {
+        VertexShader GLSL150 : Shaders/Clouds.vert
+        FragmentShader GLSL150 : Shaders/Clouds.frag
+        
+        WorldParameters {
+            WorldViewProjectionMatrix
+            WorldViewMatrix
+            NormalMatrix
+            Time
+        }
+    }
+}

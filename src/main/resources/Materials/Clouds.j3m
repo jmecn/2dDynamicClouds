@@ -1,0 +1,26 @@
+Material Clouds : MatDefs/Clouds.j3md {
+
+    MaterialParameters {
+        Octave0 : Repeat Textures/noise_128.png
+        Octave1 : Repeat Textures/noise_64.png
+        Octave2 : Repeat Textures/noise_32.png
+        Octave3 : Repeat Textures/noise_16.png
+        
+        Octave0_ST : 1.0 1.0 0.0 0.0
+        Octave1_ST : 1.0 1.0 0.0 0.0
+        Octave2_ST : 1.0 1.0 0.0 0.0
+        Octave3_ST : 1.0 1.0 0.0 0.0
+        
+        CloudColor : 1.0 1.0 1.0 1.0
+        
+        Sharpness : 0.6
+        Emptiness : 0.3
+        
+        Speed : 0.01
+    }
+    
+    AdditionalRenderState {
+        Blend Alpha
+        FaceCull Off
+    }
+}
