@@ -19,8 +19,8 @@ MaterialDef 2D Dynamic Clouds {
         Float Speed : 1.0
     }
     Technique Default {
-        VertexShader GLSL110 : Shaders/Clouds110.vert
-        FragmentShader GLSL110 : Shaders/Clouds110.frag
+        VertexShader GLSL110 : Shaders/Clouds/Clouds110.vert
+        FragmentShader GLSL110 : Shaders/Clouds/Clouds110.frag
         
         WorldParameters {
             WorldViewProjectionMatrix
@@ -28,8 +28,8 @@ MaterialDef 2D Dynamic Clouds {
         }
     }
     Technique Default {
-        VertexShader GLSL150 : Shaders/Clouds150.vert
-        FragmentShader GLSL150 : Shaders/Clouds150.frag
+        VertexShader GLSL150 : Shaders/Clouds/Clouds150.vert
+        FragmentShader GLSL150 : Shaders/Clouds/Clouds150.frag
         
         WorldParameters {
             WorldViewProjectionMatrix
